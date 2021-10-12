@@ -1,0 +1,38 @@
+package com.mycompany.mavenproject1;
+
+import com.sun.xml.internal.ws.util.StringUtils;
+import java.util.Scanner;
+
+/**
+ *
+ * @author smyan
+ */
+public class expLogicaV {
+
+    expLogicaV() {
+        Scanner leer = new Scanner(System.in);
+        int contadorN = 0;
+        String cadena = "( 9 + 9 ) * .2 / 6^2 - b7.6 ";
+        String c = "",n = "",s="";
+        //cadena = leer.nextLine();
+        
+        String[] arrayDato = cadena.split(" ");
+        int caracter = 0, numero =0, str=0;
+        
+        for (int i = 0; i < arrayDato.length; i++) {
+            if(arrayDato[i].matches("[a-zA-Z~@#$^*()/+-]")){
+                caracter++;
+                c=c+arrayDato[i]+" ";
+            }else if(arrayDato[i].matches("[0-9]")){
+                numero++;
+                n=n+arrayDato[i]+" ";
+            }else{
+                str++;
+                s=s+arrayDato[i]+" ";
+            }
+        }
+          System.out.println("No. Caracteres: "+ caracter + "   Caracteres: " +c); 
+          System.out.println("No. Numeros: "+ numero + "   Numeros: " +n);
+          System.out.println("No. Cadenas: "+ str + "   Caracteres: " +s);
+    }
+}
