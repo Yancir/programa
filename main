@@ -1,0 +1,39 @@
+package com.mycompany.mavenproject1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author smyan
+ */
+public class NewMain {
+
+    public static void main(String[] args) {
+        int opc;
+        Scanner leer = new Scanner(System.in);
+        // Menú
+        System.out.println("-----Elige una opción:-----");
+        System.out.println("1. Expresiones aritméticas");
+        System.out.println("2. Expresión lógica");
+        System.out.println("3. Expresión lógica v2");
+        opc = leer.nextInt();
+        
+        switch (opc) {
+            case 1:
+                System.out.println("-------Expresión aritmética------");
+                Operaciones o = new Operaciones();
+                o.Aritmetica();
+                break;
+            case 2:
+                System.out.println("-------Expresión Lógica------");
+                
+                break;
+            case 3:
+                System.out.println("-------Expresión Lógica V2------");
+                expLogicaV v = new expLogicaV();
+                break;
+        }
+
+    }
+
+}
